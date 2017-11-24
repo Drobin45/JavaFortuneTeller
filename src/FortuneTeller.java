@@ -25,21 +25,28 @@ public class FortuneTeller {
 	System.out.println("How many siblings do you have?");
 	int siblings = input.nextInt();
 	
-	System.out.println("Yes or No. Do you know what ROYGBIV stands for?");
-	boolean ROYQuestion = input.hasNext();
+	System.out.println("Yes or no: do you know what ROYGBIV stands for. \n");
+	String ROYQuestion = input.next();
 	
-	if (ROYQuestion == false)
+	if (ROYQuestion.equalsIgnoreCase("No"))
+	
 	{
-		System.out.println("ROYGBIV stands for Red, Orange, Yellow, Green, Blue, Indigo, or Violet."
+		System.out.println("ROYGBIV stands for Red, Orange, Yellow, Green, Blue, Indigo, or Violet. \n"
 				+ "Please choose your favorite of these colors. Please spell carefully!");
 	}
 	
-	else 
+	else if (ROYQuestion.equalsIgnoreCase("Yes"))
 	{
 		System.out.println("Great! Which is your favorite ROYGBIV color then? Please spell carefully!");
 	}
-	String favColor = input.next();
-			
 	
+	else
+	{
+		System.out.println("Incorrect input. Please enter a ROYGBIV color");
+	}
+	
+	String favColor = input.nextLine();
+			
+	//Do the rest
 }
 }
